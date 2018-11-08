@@ -11,7 +11,6 @@ url_dict = {
 	'btg_txid': 'https://explorer.bitcoingold.org/insight-api/tx/'
 }
 
-
 def btcGet():
 	with urlopen(url_dict['btc_blocks']) as data:
 		source = data.read()
@@ -292,15 +291,6 @@ def getBtgBlockHead(btg_data):
 				else:
 					pass
 
-
-	# while count < 10:
-	# 	for i in btg_data['blocks'][count]:
-	# 		if i == 'height':
-	# 			head_list.append(btg_data['blocks'][count]['height'])
-	# 			count += 1
-	# 		else:
-	# 			pass
-
 	count = 0
 
 	try:
@@ -331,14 +321,6 @@ def getBtgBlockHead(btg_data):
 					count += 1
 				else:
 					pass
-
-	# while count < 10:
-	# 	for i in btg_data['blocks'][count]:
-	# 		if i == 'hash':
-	# 			hash_list.append(btg_data['blocks'][count]['hash'])
-	# 			count += 1
-	# 		else:
-	# 			pass
 
 	for i in hash_list:
 		block_url = 'https://explorer.bitcoingold.org/insight/block/'
